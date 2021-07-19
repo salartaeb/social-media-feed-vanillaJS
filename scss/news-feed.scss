@@ -1,0 +1,36 @@
+.news-feed {
+  display: flex;
+  
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#post-header {
+  display: flex;
+  flex-direction: row !important;
+
+  img {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+  }
+}
+
+#picture {
+  
+}
+
+#post-text {
+
+}
+
+.post-footer {
+
+}
+
+#like-btn {
+
+}
