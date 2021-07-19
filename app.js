@@ -51,7 +51,6 @@ const postContainer = document.querySelector('.post-container');
 
 
 
-
 // const postData = [ 
 //   { 
 //   "user": {
