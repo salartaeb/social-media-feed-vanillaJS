@@ -7,25 +7,28 @@
   <title>Social Media Feed</title>
 
   <!-- Javascript -->
-  <script src="app.js"></script>
-  
+
   <!-- // Font Awesome for Icons  -->
   <script src="https://use.fontawesome.com/ff5abfc1c4.js"></script>
 
   <!-- Normalize css across browsers -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/form.css" />
   <link rel="stylesheet" href="css/news-feed.css" />
+
+
 </head>
 
 <body>
   <div class="container">
     <form class="post-form">
       <p class="alert"></p>
-      <h3>Social Media App</h3>
+      <h3>Scial Media App</h3>
       <div class="form-control">
         <input type="text" id="post" placeholder="enter what you're thinking here">
         <button type="submit" class="submit-post-btn">
@@ -34,32 +37,11 @@
     </form>
     <div class="news-feed">
       <article class="post-container">
-        <div id="post-header">
-          <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
-          " alt='avatar' />
-          <p id="name">Bob</p>
-          <p id="handle">@BOBSDa</p>
-          <p id="created-at">Created At</p>
-        </div>
-        <img id="picture" src="https://image.shutterstock.com/image-photo/mountain-landscape-lake-range-large-260nw-1017466240.jpg" alt="post-img">
-        <p id = "post-text">Here is a nice picture of a mountain i took this weekend</p>
-        <div class="post-footer" style="display: flex; justify-content: space-around;">
-          <button id="like-btn">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button>
-            <i class="fas fa-heart"></i>
-          </button>
-          <button>
-            <i class="fas fa-heart"></i>
-          </button>
-          <button>
-            <i class="fas fa-heart"></i>
-          </button>      
-        </div>
+
       </article>
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
