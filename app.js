@@ -3,8 +3,8 @@ const form = document.querySelector('.form');
 const submitPost = document.querySelector('submit-post');
 const likeButton = document.querySelector('like-button');
 const alert = document.querySelector('.alert');
-const newsFeed = document.querySelector('.feed');
-
+const feed = document.querySelector('.news-feed');
+  
 const postData = [ 
   { 
   "user": {
@@ -31,3 +31,24 @@ const postData = [
   "created_at": 1461116232227
 },
 ];
+
+// Populate news Feed
+
+fetch(postData)
+  .then((res) => {
+    console.log(res);
+    return res.json();
+  })
+  .then((data) => {
+    return appendData(data);
+  })
+  .catch((err) => {
+    
+  });
+
+  const appendData = (data) => {
+    for (i = 0; i < data.length; i++) {
+      div.innerHTML = 'Name:' + data[i].name;
+      feed.appendChild(div);
+    }
+  }
