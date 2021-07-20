@@ -24,15 +24,14 @@ function submitPost(e) {
   const id = new Date().getTime().toString();
   const postImageSrc = frame.src;
   
-
   if (value) {
+    console.log(frame.src, 'this is frame src')
     const element = document.createElement('article');
   
     // add styles class to element
     element.classList.add('post-container')
-    console.log(frame.src, 'this is fram ser')
 
-    // add id
+    // add post id
     const attr = document.createAttribute('post-id');
     attr.value = id;
     element.setAttributeNode(attr);
@@ -75,7 +74,6 @@ function displayAlert(text, action) {
 //preview image upload\
 function preview() {
   frame.src=URL.createObjectURL(event.target.files[0]);
-  console.log(frame.src)
 }
 
 //
