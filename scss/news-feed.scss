@@ -13,7 +13,8 @@
 
 #post-header {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: row;
+  justify-content: space-evenly;
 
   img {
     border-radius: 50%;
@@ -22,12 +23,11 @@
   }
 }
 
-.post-footer {
+#post-footer {
   display: flex !important;
   flex-direction: row !important;
-  justify-content: center background-color: blue;
-
-
+  justify-content: center 
+  background-color: blue;
 }
 
 //       
