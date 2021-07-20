@@ -28,17 +28,19 @@
   <div class="container">
     <form class="post-form">
       <p class="alert"></p>
-      <h3>Scial Media App</h3>
+      <h3>Social Media App</h3>
       <div class="form-control">
         <input type="text" id="post" placeholder="enter what you're thinking here">
+        <input type="file" id="upload-image" name="filename" onchange="preview()">
+        <img id="frame" src="" width="100px" height="100px" />
         <button type="submit" class="submit-post-btn">
           Post</button>
       </div>
     </form>
     <div class="news-feed">
-      <article class="post-container">
+      <!-- <article class="post-container">
 
-      </article>
+      </article> -->
     </div>
   </div>
   <script src="app.js"></script>
