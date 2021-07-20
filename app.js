@@ -13,13 +13,11 @@ const postContainer = document.querySelector('.post-container');
 
 form.addEventListener('submit', submitPost);
 
-
-
 // ****** EVENT LISTENERS *****************
-
 
 // ****** FUNCTIONS ***********************
 
+//submit post
 function submitPost(e) {
   e.preventDefault();
   const value = post.value;
@@ -36,31 +34,23 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
-    <div id="post-header">
-      <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
-      " alt='avatar' />
-      <p id="name">Bob</p>
-      <p id="handle">@BOBSDa</p>
-      <p id="created-at">Created At</p>
-    </div>
-    <img id="picture"
-    src="https://image.shutterstock.com/image-photo/mountain-landscape-lake-range-large-260nw-1017466240.jpg"
-    alt="post-img">
-    <p id="post-text">Here is a nice picture of a mountain i took this weekend</p>
-    <div class="post-footer" style="display: flex; justify-content: space-around;">
-      <button id="like-btn">
-        <i class="fas fa-heart"></i>
-      </button>
-      <button>
-        <i class="fas fa-heart"></i>
-      </button>
-      <button>
-        <i class="fas fa-heart"></i>
-      </button>
-      <button>
-        <i class="fas fa-heart"></i>
-      </button>
-     </div>
+      <div id="post-header">
+        <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
+        " alt='avatar' />
+        <p id="name">Bob</p>
+        <p id="handle">@BOBSDa</p>
+        <p id="created-at">${id}</p>
+      </div>
+      <img id="picture"
+      src="https://image.shutterstock.com/image-photo/mountain-landscape-lake-range-large-260nw-1017466240.jpg"
+      alt="post-img">
+      <p id="post-text">${value}</p>
+      <div id="post-footer" style="display: flex; justify-content: space-around;">
+        <button id="like-btn">
+          <i class="fas fa-heart"></i>
+        </button>
+        <p class="created-at">Hello</p>
+      </div>
     `
     console.log('post successfully created');
     feed.appendChild(element);
@@ -75,9 +65,16 @@ function submitPost(e) {
 
 // ****** FUNCTIONS ***********************
 
+//display alert 
 function displayAlert(text, action) {
   alert.textContent = text;
 }
+
+//preview image upload\
+function preview() {
+  frame.src=URL.createObjectURL(event.target.files[0]);
+}
+
 
 
 
