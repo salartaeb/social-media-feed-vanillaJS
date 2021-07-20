@@ -22,12 +22,15 @@ function submitPost(e) {
   e.preventDefault();
   const value = post.value;
   const id = new Date().getTime().toString();
+  const postImageSrc = frame.src;
+  
 
   if (value) {
     const element = document.createElement('article');
-
+  
     // add styles class to element
     element.classList.add('post-container')
+    console.log(frame.src, 'this is fram ser')
 
     // add id
     const attr = document.createAttribute('post-id');
@@ -42,8 +45,7 @@ function submitPost(e) {
         <p id="created-at">${id}</p>
       </div>
       <img id="picture"
-      src="https://image.shutterstock.com/image-photo/mountain-landscape-lake-range-large-260nw-1017466240.jpg"
-      alt="post-img">
+      src="${postImageSrc}">
       <p id="post-text">${value}</p>
       <div id="post-footer" style="display: flex; justify-content: space-around;">
         <button id="like-btn">
@@ -73,8 +75,10 @@ function displayAlert(text, action) {
 //preview image upload\
 function preview() {
   frame.src=URL.createObjectURL(event.target.files[0]);
+  console.log(frame.src)
 }
 
+//
 
 
 
