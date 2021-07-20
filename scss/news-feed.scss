@@ -1,20 +1,14 @@
 .news-feed {
-  display: flex;
-  margin-top: 2em;
-
+  
 }
 
 .post-container {
-  display: flex;
-  flex-direction: column;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 #post-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  
 
   img {
     border-radius: 50%;
@@ -24,10 +18,7 @@
 }
 
 #post-footer {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center 
-  background-color: blue;
+
 }
 
 //       
