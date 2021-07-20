@@ -36,6 +36,7 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
+    <div class="news-feed">
       <div id="post-header">
         <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
         " alt='avatar' />
@@ -44,17 +45,18 @@ function submitPost(e) {
         <p id="created-at">${id}</p>
       </div>
       <img id="picture"
-      src="${postImageSrc}">
+        src="${postImageSrc}">
       <p id="post-text">${value}</p>
-      <div id="post-footer" style="display: flex; justify-content: space-around;">
+      <div id="post-footer" style="display: flex; justify-content:      space-around;">
         <button id="like-btn">
           <i class="fas fa-heart"></i>
         </button>
         <p class="created-at">Hello</p>
       </div>
+    </div>
     `
     console.log('post successfully created');
-    feed.appendChild(element);
+    container.appendChild(element);
   }
   else {
     console.log('please enter a value')
