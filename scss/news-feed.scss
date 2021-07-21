@@ -1,39 +1,47 @@
-.news-feed {
-  
-}
-
 .post-container {
+  display: grid;
+  background-color: #243447;
   margin-top: 1em;
   margin-bottom: 1em;
+  border: red 5px solid;
+  border-radius: 10px;
+
+  #post-text {
+    
+    
+    word-wrap: break-word;
+  }
+
+  #picture {
+    object-fit: cover;
+
+  }
+
 }
 
 #post-header {
-  
+  display: grid;
+  grid-template-columns: 60px 80px 40px 200px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  background-color: #243447;
 
   img {
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    max-width: 50px;
+    display: grids;
+    
   }
+
+
 }
 
 #post-footer {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #243447;
 }
 
-//       
 
-// #picture {
-
-// }
-
-// #post-text {
-//                                 
-// }
-
-//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-}
-
-.post-footer {}
-
-#like-btn {}
