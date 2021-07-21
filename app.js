@@ -25,7 +25,7 @@ function submitPost(e) {
   const postImageSrc = frame.src;
   
   if (value) {
-    console.log(frame.src, 'this is frame src')
+    console.log(e.src, 'this is frame src')
     const element = document.createElement('article');
   
     // add styles class to element
@@ -36,7 +36,6 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
-    <div class="news-feed">
       <div id="post-header">
         <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
         " alt='avatar' />
@@ -47,13 +46,11 @@ function submitPost(e) {
       <img id="picture"
         src="${postImageSrc}">
       <p id="post-text">${value}</p>
-      <div id="post-footer" style="display: flex; justify-content:      space-around;">
+      <div id="post-footer">
         <button id="like-btn">
-          <i class="fas fa-heart"></i>
+          Hello
         </button>
-        <p class="created-at">Hello</p>
       </div>
-    </div>
     `
     console.log('post successfully created');
     container.appendChild(element);
