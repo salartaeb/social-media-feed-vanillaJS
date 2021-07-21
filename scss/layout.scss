@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
 * {
-  background-color: #243447;
+  // background-color: #eee;
   max-width: 400px;
   font-family: 'Open Sans', sans-serif;
   margin: auto;
@@ -11,7 +11,8 @@
 
 .container {
   display: grid;
-  grid-template-rows: auto;
+  // grid-template-rows: auto;
   margin: auto;
+  background-color: black;
   
 }

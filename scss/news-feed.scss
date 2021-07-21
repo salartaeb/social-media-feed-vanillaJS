@@ -1,70 +1,95 @@
+// Variables
+// Text
+$name-color: #FFF;
+$name-size: 15px;
+$post-font: 'arial, sans-serif';
+
+
 .post-container {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 60px 100x 100px;
+  grid-template-columns: 100px 200x 200px;
   grid-template-areas:
   "sidebar header header"
-  "sidebar content content"
-  ".......  footer  footer";
-  background-color: #243447;
+  "....... text ....... "
+  "....... content content"
+  ".......  footer  .......";
+  background-color: black;
   margin-top: 1em;
   margin-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
   border: red 5px solid;
   border-radius: 10px;
 }
 
   #post-text {
-    
-    
     word-wrap: break-word;
+    color:  #d9d9d9;
   }
 
   #picture {
-    object-fit: cover;
-
+    max-width: 300px;
   }
   
   .sidebar {
-      grid-area: sidebar;
-    }
-  
-    .content {
-      grid-area: content;
-    }
-  /* Header */
-  
-    .header {
-      grid-area: header;
-    }
+    margin-top: 1em;
+    grid-area: sidebar;
+    border-radius: 50%;
+    max-width: 50px;
+  }
 
-  
-    .footer {
-      grid-area: footer;
-    }
+  .text {
+    grid-area: text;
+  }
+
+  .content {
+    grid-area: content;
+    
+  }
+/* Header */
+
+  .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
 
 #post-header {
   display: grid;
   grid-template-columns: 80px 1fr 1fr;
   padding-top: 1em;
   padding-bottom: 1em;
-  text-align: center;
-  background-color: #243447;
+  text-align: left;
+  background-color: black;
+}
 
-  img {
-    border-radius: 50%;
-    max-width: 50px;
-    display: grids;
-    
+// Header Elements
+
+  #name {
+    color: #d9d9d9;
+    font-size: 15px;
   }
 
+  #handle {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+  }
 
-}
+  #created-at {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+  }
 
 #post-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #243447;
+  background-color: black;
+  padding-bottom: 1em;
 }
 
 
