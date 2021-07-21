@@ -36,17 +36,18 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
-      <div id="post-header">
-        <img src="https://i.pravatar.cc/150?u=fake@pravatar.com
-        " alt='avatar' />
+    <img class="sidebar" src="https://i.pravatar.cc/150?u=fake@pravatar.com
+    " alt='avatar' />
+      <div id="post-header" class="header">
+     
         <p id="name">Bob</p>
         <p id="handle">@BOBSDa</p>
         <p id="created-at">${id}</p>
       </div>
-      <img id="picture"
+      <img id="picture" class="content"
         src="${postImageSrc}">
-      <p id="post-text">${value}</p>
-      <div id="post-footer">
+      <p id="post-text" class="content">${value}</p>
+      <div id="post-footer" class="footer">
         <button id="like-btn">
           Hello
         </button>
