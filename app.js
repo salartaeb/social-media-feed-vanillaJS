@@ -23,11 +23,11 @@ function submitPost(e) {
   const value = post.value;
   const id = new Date().getTime().toString();
   const postImageSrc = frame.src;
-  
+
   if (value) {
-    console.log(e.src, 'this is frame src')
+    console.log(frame.src, 'this is frame src')
     const element = document.createElement('article');
-  
+
     // add styles class to element
     element.classList.add('post-container')
 
@@ -36,27 +36,25 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
-    <img class="sidebar" src="https://i.pravatar.cc/150?u=fake@pravatar.com
+    <img class="sidebar top" src="https://i.pravatar.cc/150?u=fake@pravatar.com
     " alt='avatar' />
       <div id="post-header" class="header">
-     
         <p id="name">Bob</p>
         <p id="handle">@BOBSDa</p>
         <p id="created-at">${id}</p>
       </div>
+      <p id="post-text" class="text">${value}</p>
       <img id="picture" class="content"
         src="${postImageSrc}">
-      <p id="post-text" class="content">${value}</p>
       <div id="post-footer" class="footer">
         <button id="like-btn">
-          Hello
+          <i class="fa fa-heart" aria-hidden="true"></i>
         </button>
       </div>
     `
     console.log('post successfully created');
     container.appendChild(element);
-  }
-  else {
+  } else {
     console.log('please enter a value')
   }
 }
@@ -73,7 +71,7 @@ function displayAlert(text, action) {
 
 //preview image upload\
 function preview() {
-  frame.src=URL.createObjectURL(event.target.files[0]);
+  frame.src = URL.createObjectURL(event.target.files[0]);
 }
 
 //

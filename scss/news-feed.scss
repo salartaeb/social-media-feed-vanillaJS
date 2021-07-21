@@ -11,25 +11,30 @@ $post-font: 'arial, sans-serif';
   grid-template-columns: 100px 200x 200px;
   grid-template-areas:
   "sidebar header header"
-  "....... text ....... "
+  "....... text text "
   "....... content content"
   ".......  footer  .......";
   background-color: black;
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-right: 0;
+  margin-left: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border: red 5px solid;
-  border-radius: 10px;
+  border: #a8a7a78d 1px solid;
 }
 
   #post-text {
-    word-wrap: break-word;
+    word-wrap: break-word !important;
     color:  #d9d9d9;
+    margin: 0;
+    width: 90%;
+    overflow: hidden;
   }
 
   #picture {
-    max-width: 300px;
+    width: 90%;
+    margin: 0;
   }
   
   .sidebar {
@@ -60,10 +65,11 @@ $post-font: 'arial, sans-serif';
 
 #post-header {
   display: grid;
-  grid-template-columns: 80px 1fr 1fr;
+  grid-template-columns: 40px 75px 150px;
+  margin: 0;
   padding-top: 1em;
   padding-bottom: 1em;
-  text-align: left;
+  text-align: center;
   background-color: black;
 }
 
@@ -85,11 +91,28 @@ $post-font: 'arial, sans-serif';
   }
 
 #post-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin: 0;
   background-color: black;
   padding-bottom: 1em;
 }
 
+//icons
+i {
+  font-family:'FontAwesome' !important;
+  margin: 0;
+  background-color: black; 
+  color: white;
+  padding: 5px;
+  font-size: 2px;
+  
+  
+  
+}
 
+#like-btn {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  border-radius: 10px;
+
+}
