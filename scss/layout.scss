@@ -1,10 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
 * {
-  background-color: #EEE;
+  background-color: #243447;
   max-width: 400px;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  
 }
 
-// .container {
-//   background-color: EEE;
-// }
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  margin: auto;
+  
+}
