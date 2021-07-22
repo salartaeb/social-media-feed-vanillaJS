@@ -13,29 +13,30 @@ $post-font: 'arial, sans-serif';
   "....... text text "
   "....... content content"
   ".......  footer  .......";
-  background-color: #eeeeee;
-  border: #DEDEDE 1px solid;
+  background-color: #121212;
+  ;
+  
+  // border-radius: 10px;
   margin-right: 0;
   margin-left: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border-radius: 10px;
+  // border-radius: 10px;
   
 }
 
   #post-text {
     word-wrap: break-word !important;
-    color:  black;
+    color:  #eee;
     margin: 0;
     width: 90%;
     overflow: hidden;
-    margin-top: 1em;
+
     margin-right: 0;
     margin-left: 0;
-    margin-top: 1em;
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 1em;
+    
     width: 100%;
   }
 
@@ -53,8 +54,11 @@ $post-font: 'arial, sans-serif';
     margin-top: 1em;
     grid-area: sidebar;
     border-radius: 50%;
-    max-width: 40px;
+    max-width: 30px;
     width: 100%;
+    border-color: #bb86fc;
+    border-width: 2px;
+    border-style: solid;
   }
 
   .text {
@@ -80,17 +84,18 @@ $post-font: 'arial, sans-serif';
   display: grid;
   grid-template-columns: 40px 75px 250px;
   margin: 0;
+  
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: left;
-  background-color: #eeeeee;
+  background-color: #121212;
   width: 100%;
 }
 
 // Header Elements
 
   #name {
-    color: black;
+    color: #bb86fc;
     font-size: 15px;
     font-family:  Helvetica, sans-serif;
   }
@@ -107,15 +112,16 @@ $post-font: 'arial, sans-serif';
 
 #post-footer {
   margin: 0;
-  background-color: #eeeeee;
-  padding-bottom: 1em;
+  
+  background-color: #121212;
+  padding-bottom: 2em;
 }
 
 //icons
 i {
   font-family:'FontAwesome' !important;
   margin: 0;
-  background-color: #eeeeee; 
+  background-color: #121212; 
   color: red;
   padding: 5px;
   font-size: 2px;

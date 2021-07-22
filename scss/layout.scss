@@ -7,14 +7,15 @@
 
 body {
   font-family: Helvetica, sans-serif;
-  background-color: #4d4d4d;
+  background-color: black;
 }
 
 .container {
   display: grid;
-  background-color: #eeeeee;
+  background-color: #121212;
   margin: 0;
   border-radius: 10px;
+  
   box-shadow: none !important;
   width: 100%;
   
@@ -22,3 +23,17 @@ body {
 
 
 
+#modal-btn {
+  color: white;
+  background-color: black;
+  color: #BB86fc;
+  border-style: solid;
+  border-color: #BB86fc;
+  border-width: 1px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 16px;
+  text-align: center;
+  right: 20px;
+  width: 100%;
+}
