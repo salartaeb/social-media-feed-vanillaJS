@@ -1,7 +1,8 @@
 .post-form {
   display: none;
   padding-top: 5px;
-  padding-bottom:10px;
+  padding-bottom: 5px;
+
   p {
     display: block;
   }
@@ -9,22 +10,17 @@
 
 .post-content {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
   margin: 0;
-
   grid-template-columns: 62px 250px 60px;
   grid-template-areas:
-  "sidebar header rightbar"
-  "....... header ....... "
-  ".......  content  content"
-  
-  
-  
-  
+    "sidebar header rightbar"
+    "....... header ....... "
+    ".......  content  content"
 }
 
 .image-upload>input {
-  display: none; 
+  display: none;
 }
 
 #post {
@@ -34,8 +30,12 @@
   border-radius: 10px;
   border: none;
   font-size: 1.5em;
-  background-color: #3d3d3d;
-  color: white;
+  background-color: #22303c;
+
+}
+
+input:focus {
+  outline: none;
 }
 
 .rightbar {
@@ -45,19 +45,13 @@
 .submit-post-btn {
   width: 100%;
   margin-top: 5px;
-  color: #3700b7;
-  background-color: #121212;
-  
-  
+  background-color: #15202b;
   padding: 5px;
   font-size: 15px;
   margin: 0;
   border-radius: 10px;
   display: block;
-
-  
 }
-
 
 // .alert {
 //   margin-bottom: 1rem;
@@ -72,7 +66,36 @@
 // }
 
 .fa-upload {
-  color: #bb86fc;
+  color: #8899a6;
+  font-size: 2em;
+  background-color: #15202b;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.fa-edit {
+  color: #1DA1F2;
+  font-size: 20px;
+  background-color: #15202b;
+
+
+
+}
+
+.fa-arrow-circle-up {
+  font-size: 20px;
+  // width: 10%;
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+
+
+.fa-pen {
+  color: #ffffff;
   font-size: 30px;
 }
 
@@ -84,9 +107,8 @@
 
 #picture-preview {
   overflow: hidden;
-  border-radius: 4px;
+  // border-radius: 10px;
 }
-
 
 .close-btn {
   display: flex;
@@ -96,23 +118,40 @@
   border-color: red;
   border-style: solid;
   border-width: 5px;
-  background-color: #121212;
+  background-color: #15202b;
   border-width: 0;
   padding: 5px;
   font-size: 15px;
-  
+
   border-radius: 4px;
   text-align: center;
 }
+
 .close-btn:hover {
-  color: darkgray;
-}
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  color: white;
+  cursor: pointer;
 }
 
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}

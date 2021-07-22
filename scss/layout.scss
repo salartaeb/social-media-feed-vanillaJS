@@ -7,33 +7,65 @@
 
 body {
   font-family: Helvetica, sans-serif;
-  background-color: black;
+  background-color: #eee;
+
 }
 
 .container {
   display: grid;
-  background-color: #121212;
+  background-color: #15202b;
   margin: 0;
-  border-radius: 10px;
-  
+
+
   box-shadow: none !important;
   width: 100%;
-  
+
 }
 
-
-
 #modal-btn {
-  color: white;
-  background-color: black;
-  color: #BB86fc;
-  border-style: solid;
-  border-color: #BB86fc;
-  border-width: 1px;
+  background-color: #22303c;
+  color: #8899a6;
   padding-top: .5em;
   padding-bottom: .5em;
   font-size: 16px;
   text-align: center;
   right: 20px;
   width: 100%;
+
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+span {
+  width: 100%;
+  margin-top: 5px;
+  color: #1DA1F2;
+  background-color: #15202b;
+  padding: 5px;
+  font-size: 20px;
+  margin: 0;
+  border-radius: 10px;
+
+}
+
+.presentation-footer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #22303c;
+  border-top: #22303c 4px solid;
+  padding-bottom: 10px;
+
+  span {
+    color: #1DA1F2;
+    background-color: #22303c;
+  }
+
+
+
+
 }
