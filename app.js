@@ -7,6 +7,7 @@ const likeButton = document.querySelector('.like-btn');
 const feed = document.querySelector('.news-feed');
 const postContainer = document.querySelector('.post-container');
 const scrolltopBtn = document.getElementById('scroll-to-top');
+const uploadImageBtn = document.getElementById('upload-image')
 // const name = getElementById('name');
 // const handle = getElementById('handle');
 // const createdAt = getElementById('created-at');
@@ -14,6 +15,7 @@ const scrolltopBtn = document.getElementById('scroll-to-top');
 form.addEventListener('submit', submitPost);
 
 // ****** EVENT LISTENERS *****************
+
 
 // ****** FUNCTIONS ***********************
 
@@ -57,7 +59,7 @@ function submitPost(e) {
     //simulates delay experienced when the user has posted something
     simulateDelay(() => {
       console.log('post successfully created');
-      form.appendChild(element);
+      form.append(element);
       setBackToDefault();
     });
    
