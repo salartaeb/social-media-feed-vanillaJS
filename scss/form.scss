@@ -8,12 +8,14 @@
 .post-content {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 50px 275px 50px;
+  margin: 0;
+  
+  grid-template-columns: 62px 275px 40px;
   grid-template-areas:
   "sidebar header rightbar"
   "....... header ....... "
   ".......  content  content"
-  ".......  content  content";
+  
   
   
 }
@@ -23,8 +25,8 @@
 }
 
 #post {
-  line-height: 1em;
-  height: 100px;
+  word-break: break-word;
+  margin: 0;
 }
 
 .rightbar {
@@ -33,13 +35,14 @@
 
 .submit-post-btn {
   width: 100%;
-  // margin-top: 5px;
+  margin-top: 5px;
   color: white;
   background-color: #1DA1F2;
   border-color: #1DA1F2;
   border-width: 0;
   padding: 10px;
   font-size: 15px;
+  margin: 0;
 
   
 }
@@ -59,9 +62,21 @@
 
 .fa-upload {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 // .form-control {
 //   padding-bottom: 1em;
 // }
+
+
+
+//keyframes
+
+#frame {
+  margin: 0;
+}
+
+#picture-preview {
+  overflow: hidden;
+}
