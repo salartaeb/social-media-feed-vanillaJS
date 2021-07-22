@@ -28,12 +28,22 @@
       <p class="alert"></p>
       <h3>Social Media App</h3>
       <div class="form-control">
-        <input type="text" id="post" placeholder="enter what you're thinking here">
-        <input type="file" id="upload-image" name="filename" onchange="preview()">
-        <img id="frame" src="" width="100px" height="100px" />
-        <button type="submit" class="submit-post-btn">
-          Post</button>
-      </div>
+        <div class="post-content">
+          <img class="sidebar top" src="https://i.pravatar.cc/150?u=fake@pravatar.com
+          " alt='avatar' />
+          <input type="text" id="post" class="header" placeholder="enter what you're thinking here">
+          <div class="image-upload">
+            <label for="upload-image">
+              <i class="fas fa-upload" style="color: white; font-size: 20px;"></i>
+            </label>
+            <input class="rightbar" type="file" id="upload-image" name="filename" onchange="preview()">
+          </div>
+        </div>
+        <div id="picture preview" class="content">
+          <img id="frame" src="" width="100%" height="200px" />
+        </div>
+        <button type="submit" class="submit-post-btn" for="post">
+          P</button>
     </form>
     <div class="news-feed">
       <!-- <article class="post-container">
