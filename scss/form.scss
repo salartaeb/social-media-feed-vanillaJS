@@ -1,10 +1,52 @@
-// form {
-//   flex-direction: column;
+.post-form {
+
+  p {
+    display: block;
+  }
+}
+
+.post-content {
+  // display: flex;
+
+  // flex-direction: row;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50px 275px 50px;
+  grid-template-areas:
+  "sidebar header rightbar"
+  "....... header ....... "
+  ".......  content  content"
+  ".......  content  content"
+  
+}
+
+.image-upload>input {
+  display: none;
+  
+}
+
+// #upload-image {
+  
+  
+//   margin: 0;
+//   display: grid;
+//   overflow: hidden;
+  
 // }
 
-// .form-control {
-//   flex-direction: column;
-// }
+#post {
+  line-height: 1em;
+  height: 100px;
+}
+
+.rightbar {
+  grid-area: rightbar
+}
+
+.submit-post-btn {
+  grid-area: submit-post-btn;
+}
+
 
 // .alert {
 //   margin-bottom: 1rem;
