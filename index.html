@@ -23,8 +23,9 @@
 </head>
 
 <body>
-  <a id="modal-btn"> click me, I make a modal</a>
+  
   <div class="container">
+    <a id="modal-btn">New Post</a>
     <form class="post-form">
       <p class="alert"></p>
       <div class="form-control">
@@ -40,12 +41,12 @@
           </div>
         </div>
         <div id="picture-preview" class="content" >
-          <img id="frame" src="" width="100%" height="100px"  />
+          <img id="frame" src="" width="100%" height="200px"  />
         </div>
         <div style="display: flex; flex-direction: row;">
-        <button type="submit" class="submit-post-btn" for="post">
-          Post</button>
-        <a class="close-btn">Close</a>
+        <a href="javascript:{}" class="submit-post-btn">
+          Post</a>
+        <a class="close-btn">X</a>
       </div>
     </form>
     
@@ -54,9 +55,6 @@
   </div>
   <div class="news-feed">
     <button onclick="topFunction()" id="scroll-to-top" title="Go to top">Top</button>
-    <article class="post-container">
-   
-    </article>
   </div>
   <script src="app.js"></script>
 </body>
