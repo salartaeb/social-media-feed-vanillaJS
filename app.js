@@ -32,6 +32,10 @@ window.onclick = function(e){
     modal.style.display = "none"
   }
 }
+
+submitPostBtn.onclick = function (e) {
+  return submitPost(e)
+}
 // ****** FUNCTIONS ***********************
 
 //submit post
@@ -49,6 +53,7 @@ function submitPost(e) {
     const element = document.createElement('article');
     // add styles class to element
     element.classList.add('post-container')
+    console.log('hss')
 
     // add post id
     const attr = document.createAttribute('post-id');
@@ -70,7 +75,7 @@ function submitPost(e) {
           <i class="fa fa-heart" aria-hidden="true"></i>
         </a>
       </div>
-    `
+  `
     //simulates delay experienced when the user has posted something
     simulateDelay(() => {
       console.log('post successfully created');
