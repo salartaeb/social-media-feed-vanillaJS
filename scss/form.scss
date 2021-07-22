@@ -18,6 +18,7 @@
   
   
   
+  
 }
 
 .image-upload>input {
@@ -47,6 +48,7 @@
   font-size: 15px;
   margin: 0;
   border-radius: 4px;
+  display: block;
 
   
 }
@@ -80,26 +82,25 @@
   border-radius: 4px;
 }
 
-//modal
-.modal {
-}
-
-// .modal-content {
-//   position: relative; 
-//   background-color: white;
-//   padding: 20px; 
-//   margin: auto; 
-//   width: 75%;  
-//   -webkit-animation-name: animatetop;
-//   -webkit-animation-duration: 0.4s;
-//   animation-name: animatetop;
-//   animation-duration: 0.4s
+// #modal-button {
+//   background-color: #eeeeee;
+//   border-radius: 10px;
+//   box-shadow: none !important;
+//   width: 100%;
+  
 // }
+
 .close-btn {
-  float: right; 
-  color: lightgray; 
-  font-size: 24px;  
-  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  color: rgb(65, 62, 62);
+  border-width: 0;
+  padding: 5px;
+  font-size: 15px;
+  margin: 0;
+  border-radius: 4px;
+  text-align: center;
 }
 .close-btn:hover {
   color: darkgray;
@@ -112,3 +113,4 @@
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
+
