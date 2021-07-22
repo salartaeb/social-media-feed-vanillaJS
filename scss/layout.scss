@@ -6,21 +6,18 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: black;
+  font-family: Helvetica, sans-serif;
+  background-color: #4d4d4d;
 }
 
 .container {
   display: grid;
-  background-color: black;
+  background-color: #eeeeee;
   margin: 0;
+  border-radius: 10px;
   box-shadow: none !important;
+  width: 100%;
   
-}
-
-.icon {
-  height: 20px;
-  width: 29;
 }
 
 

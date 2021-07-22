@@ -7,35 +7,47 @@ $post-font: 'arial, sans-serif';
 
 .post-container {
   display: grid;
-  grid-gap: 10px;
   grid-template-columns: 40px 75px 250px;
   grid-template-areas:
   "sidebar header header"
   "....... text text "
   "....... content content"
   ".......  footer  .......";
-  background-color: black;
+  background-color: #eeeeee;
+  border: #DEDEDE 1px solid;
   
 
   margin-right: 0;
   margin-left: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border: #a8a7a78d 0px solid;
+  
 }
 
   #post-text {
     word-wrap: break-word !important;
-    color:  #d9d9d9;
+    color:  black;
     margin: 0;
     width: 90%;
     overflow: hidden;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 1em;
+    width: 100%;
   }
 
   #picture {
     width: 90%;
-    margin: 0;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 1em;
     border-radius: 10px;
+    width: 100%;
   }
   
   .sidebar {
@@ -43,6 +55,7 @@ $post-font: 'arial, sans-serif';
     grid-area: sidebar;
     border-radius: 50%;
     max-width: 40px;
+    width: 100%;
   }
 
   .text {
@@ -71,14 +84,16 @@ $post-font: 'arial, sans-serif';
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: left;
-  background-color: black;
+  background-color: #eeeeee;
+  width: 100%;
 }
 
 // Header Elements
 
   #name {
-    color: #d9d9d9;
+    color: black;
     font-size: 15px;
+    font-family:  Helvetica, sans-serif;
   }
 
   #handle {
@@ -93,7 +108,7 @@ $post-font: 'arial, sans-serif';
 
 #post-footer {
   margin: 0;
-  background-color: black;
+  background-color: #eeeeee;
   padding-bottom: 1em;
 }
 
@@ -101,10 +116,11 @@ $post-font: 'arial, sans-serif';
 i {
   font-family:'FontAwesome' !important;
   margin: 0;
-  background-color: black; 
-  color: white;
+  background-color: #eeeeee; 
+  color: red;
   padding: 5px;
   font-size: 2px;
+  width: 100%;
   
   
   
@@ -113,8 +129,9 @@ i {
 #like-btn {
   padding: 0;
   margin: 0;
-  background-color: black;
-  border-radius: 10px;
+  background-color: red;
+  border-radius: 60px;
+  width: 100%;
 
 }
 
@@ -129,7 +146,7 @@ i {
   border: none;
   border-radius: 50px;
   outline: none;
-  background-color: red;
+  background-color:  blue;
   color: white;
   cursor: pointer;
   padding: 15px;
