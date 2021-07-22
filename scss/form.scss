@@ -6,9 +6,6 @@
 }
 
 .post-content {
-  // display: flex;
-
-  // flex-direction: row;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 50px 275px 50px;
@@ -16,23 +13,14 @@
   "sidebar header rightbar"
   "....... header ....... "
   ".......  content  content"
-  ".......  content  content"
+  ".......  content  content";
+  
   
 }
 
 .image-upload>input {
-  display: none;
-  
+  display: none; 
 }
-
-// #upload-image {
-  
-  
-//   margin: 0;
-//   display: grid;
-//   overflow: hidden;
-  
-// }
 
 #post {
   line-height: 1em;
@@ -44,7 +32,16 @@
 }
 
 .submit-post-btn {
-  grid-area: submit-post-btn;
+  width: 100%;
+  // margin-top: 5px;
+  color: white;
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+  border-width: 0;
+  padding: 10px;
+  font-size: 15px;
+
+  
 }
 
 
@@ -60,3 +57,11 @@
 //   text-transform: capitalize;
 // }
 
+.fa-upload {
+  color: white;
+  font-size: 20px;
+}
+
+// .form-control {
+//   padding-bottom: 1em;
+// }
