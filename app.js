@@ -74,7 +74,7 @@ function submitPost(e) {
     //simulates delay experienced when the user has posted something
     simulateDelay(() => {
       console.log('post successfully created');
-      container.prepend(element);
+      container.append(element);
       setBackToDefault();
     });
    
@@ -142,6 +142,8 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
+
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+  modal.style.display = "block"
 }
