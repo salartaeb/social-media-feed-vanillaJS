@@ -3,24 +3,31 @@ const container = document.querySelector('.container');
 const form = document.querySelector('.post-form');
 const post = document.getElementById('post');
 const submitPostBtn = document.querySelector('.submit-post-btn');
-const likeButton = document.querySelector('.like-btn');
+const likeBtn = document.querySelector('.fa-heart');
 const feed = document.querySelector('.news-feed');
 const postContainer = document.querySelector('.post-container');
 const scrolltopBtn = document.getElementById('scroll-to-top');
 const uploadImageBtn = document.getElementById('upload-image')
+const footer = document.querySelector('.presentation-footer')
 // const name = getElementById('name');
 // const handle = getElementById('handle');
 // const createdAt = getElementById('created-at');
-
-let modalBtn = document.getElementById("modal-btn")
-let modal = document.querySelector(".post-form")
-let closeBtn = document.querySelector(".close-btn")
+const modalBtn = document.getElementById("modal-btn")
+const modal = document.querySelector(".post-form")
+const closeBtn = document.querySelector(".close-btn")
 
 // ****** EVENT LISTENERS *****************
+
+//submit post
 form.addEventListener('submit', submitPost);
 
+submitPostBtn.onclick = function (e) {
+  return submitPost(e)
+}
+
+//Hide / Display create post modal
 modalBtn.onclick = function(e){
-  modal.style.display = "block"
+  modal.style.display = "block";
 }
 closeBtn.onclick = function(e){
   
@@ -33,9 +40,9 @@ window.onclick = function(e){
   }
 }
 
-submitPostBtn.onclick = function (e) {
-  return submitPost(e)
-}
+
+// Scroll to top
+window.onscroll = function() {scrollFunction()};
 // ****** FUNCTIONS ***********************
 
 //submit post
@@ -53,7 +60,6 @@ function submitPost(e) {
     const element = document.createElement('article');
     // add styles class to element
     element.classList.add('post-container')
-    console.log('hss')
 
     // add post id
     const attr = document.createAttribute('post-id');
@@ -71,16 +77,17 @@ function submitPost(e) {
       <img id="picture" class="content" width="90%"
         src="${postImageSrc}" onerror="this.style.display='none'">
       <div id="post-footer" class="footer">
-        <a  id="like-btn">
-          <i class="fa fa-heart" aria-hidden="true"></i>
+        <a id="like-btn">
+          <i class="fa fa-heart" style="background-color 15202b;"  aria-hidden="true"></i>
         </a>
       </div>
   `
     //simulates delay experienced when the user has posted something
     simulateDelay(() => {
       console.log('post successfully created');
-      container.append(element);
+      feed.prepend(element);
       setBackToDefault();
+      modal.style.display = "none";
     });
    
   } 
@@ -91,7 +98,6 @@ function submitPost(e) {
 
 // ****** LOCAL STORAGE ***********************
 
-
 // ****** FUNCTIONS ***********************
 
 //display alert 
@@ -101,7 +107,6 @@ function displayAlert(text, action) {
 
 //preview image upload\
 function preview() {
-  console.log('dsad')
   frame.src = URL.createObjectURL(event.target.files[0]);
 }
 
@@ -109,7 +114,7 @@ function preview() {
 function setBackToDefault() {
   post.value=  "";
   frame.src = ""
-}
+};
 
 //format data
 function formatDate() {
@@ -134,9 +139,6 @@ function someMilliseconds() {
 
 
 // scroll to top button
-
-window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     scrolltopBtn.style.display = "block";
@@ -147,8 +149,7 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  modal.style.display = "block"
+  modal.style.display = "block";
 }
