@@ -5,8 +5,8 @@ const post = document.getElementById('post');
 const submitPostBtn = document.querySelector('.submit-post-btn');
 const likeButton = document.querySelector('.like-btn');
 const feed = document.querySelector('.news-feed');
-
 const postContainer = document.querySelector('.post-container');
+const scrolltopBtn = document.getElementById('scroll-to-top');
 // const name = getElementById('name');
 // const handle = getElementById('handle');
 // const createdAt = getElementById('created-at');
@@ -21,13 +21,12 @@ form.addEventListener('submit', submitPost);
 function submitPost(e) {
   e.preventDefault();
   const value = post.value;
-  const id = new Date().getTime().toString();
+  const id = new Date().getTime()
+
   const postImageSrc = frame.src;
 
-  if (value) {
-    console.log(frame.src, 'this is frame src')
+  if (value && frame.src.length > 32) {
     const element = document.createElement('article');
-
     // add styles class to element
     element.classList.add('post-container')
 
@@ -36,8 +35,8 @@ function submitPost(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.innerHTML = `
-    <img class="sidebar top" src="https://i.pravatar.cc/150?u=fake@pravatar.com
-    " alt='avatar' />
+    <img class="sidebar top" src="https://i.pravatar.cc/150?u=fake@pravatar.com 
+    " alt='avatar'/>
       <div id="post-header" class="header">
         <p id="name">Bob</p>
         <p id="handle">@BOBSDa</p>
@@ -45,7 +44,7 @@ function submitPost(e) {
       </div>
       <p id="post-text" class="text">${value}</p>
       <img id="picture" class="content"
-        src="${postImageSrc}">
+        src="${postImageSrc}" onerror="this.style.display='none'">
       <div id="post-footer" class="footer">
         <button id="like-btn">
           <i class="fa fa-heart" aria-hidden="true"></i>
@@ -53,8 +52,10 @@ function submitPost(e) {
       </div>
     `
     console.log('post successfully created');
-    container.appendChild(element);
-  } else {
+    form.appendChild(element);
+    setBackToDefault();
+  } 
+   else {
     console.log('please enter a value')
   }
 }
@@ -71,74 +72,30 @@ function displayAlert(text, action) {
 
 //preview image upload\
 function preview() {
+  console.log('dsad')
   frame.src = URL.createObjectURL(event.target.files[0]);
 }
 
-//
+// set form to default
+function setBackToDefault() {
+  post.value=  "";
+  frame.src = ""
+}
 
+// scroll to top button
 
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    scrolltopBtn.style.display = "block";
+  } else {
+    scrolltopBtn.style.display = "none";
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const postData = [ 
-//   { 
-//   "user": {
-//     "name": "Salar Taeb",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@Salar12313",
-//     },
-//   "content": {
-//       "text": "this is a post with an image",
-//       "image": "https://i.imgur.com/73hZDYK.png",
-//     },
-//   "created_at": 1461116232227
-// },
-// { 
-//   "user": {
-//     "name": "John Doe",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@JohnDoe",
-//     },
-//   "content": {
-//       "text": "This is a post without an image",
-//       "image": ""
-//     },
-//   "created_at": 1461116232227
-// },
-// ];
-
-// Populate news Feed
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
