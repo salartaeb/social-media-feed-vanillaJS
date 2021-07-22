@@ -21,11 +21,14 @@ form.addEventListener('submit', submitPost);
 function submitPost(e) {
   e.preventDefault();
   const value = post.value;
-  const id = new Date().getTime()
 
+  //get date and time-stamp for post-id
+  const id = formatDate();
+
+  //get uploaded image url
   const postImageSrc = frame.src;
 
-  if (value && frame.src.length > 32) {
+  if (value || postImageSrc) {
     const element = document.createElement('article');
     // add styles class to element
     element.classList.add('post-container')
@@ -43,7 +46,7 @@ function submitPost(e) {
         <p id="created-at">${id}</p>
       </div>
       <p id="post-text" class="text">${value}</p>
-      <img id="picture" class="content"
+      <img id="picture" class="content" width="90%"
         src="${postImageSrc}" onerror="this.style.display='none'">
       <div id="post-footer" class="footer">
         <button id="like-btn">
@@ -51,9 +54,13 @@ function submitPost(e) {
         </button>
       </div>
     `
-    console.log('post successfully created');
-    form.appendChild(element);
-    setBackToDefault();
+    //simulates delay experienced when the user has posted something
+    simulateDelay(() => {
+      console.log('post successfully created');
+      form.appendChild(element);
+      setBackToDefault();
+    });
+   
   } 
    else {
     console.log('please enter a value')
@@ -81,6 +88,28 @@ function setBackToDefault() {
   post.value=  "";
   frame.src = ""
 }
+
+//format data
+function formatDate() {
+  const now = new Date();
+  const year = new Date().getFullYear();
+  const day = new Date().getDay();
+  const month = new Date().getMonth();
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const id = `${months[now.getMonth()]} ${day}, ${year}`
+  return id;
+}
+
+//simulate posting delay
+function someMilliseconds() {
+  return Math.floor(Math.random() * 400) + 100;
+}
+
+ function simulateDelay(callback) {
+  setTimeout(callback, someMilliseconds());
+}
+
+
 
 // scroll to top button
 
