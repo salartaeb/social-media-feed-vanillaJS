@@ -21,7 +21,7 @@ $post-font: 'arial, sans-serif';
   margin-left: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border: #a8a7a78d 1px solid;
+  
 }
 
   #post-text {
@@ -116,3 +116,27 @@ i {
   border-radius: 10px;
 
 }
+
+//scroll back to top button
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 825px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  
+}
+
+#scroll-to-top:hover {
+  background-color: #555;
+}
+
+.post-conta
