@@ -12,11 +12,26 @@ const uploadImageBtn = document.getElementById('upload-image')
 // const handle = getElementById('handle');
 // const createdAt = getElementById('created-at');
 
-form.addEventListener('submit', submitPost);
+let modalBtn = document.getElementById("modal-btn")
+let modal = document.querySelector(".post-form")
+let closeBtn = document.querySelector(".close-btn")
 
 // ****** EVENT LISTENERS *****************
+form.addEventListener('submit', submitPost);
 
+modalBtn.onclick = function(e){
+  modal.style.display = "block"
+}
+closeBtn.onclick = function(e){
+  
+  modal.style.display = "none"
+}
+window.onclick = function(e){
 
+  if(e.target == modal){
+    modal.style.display = "none"
+  }
+}
 // ****** FUNCTIONS ***********************
 
 //submit post
@@ -51,15 +66,15 @@ function submitPost(e) {
       <img id="picture" class="content" width="90%"
         src="${postImageSrc}" onerror="this.style.display='none'">
       <div id="post-footer" class="footer">
-        <button id="like-btn">
+        <a  id="like-btn">
           <i class="fa fa-heart" aria-hidden="true"></i>
-        </button>
+        </a>
       </div>
     `
     //simulates delay experienced when the user has posted something
     simulateDelay(() => {
       console.log('post successfully created');
-      form.append(element);
+      container.prepend(element);
       setBackToDefault();
     });
    

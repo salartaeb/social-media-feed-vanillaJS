@@ -1,5 +1,5 @@
 .post-form {
-
+  display: none;
   p {
     display: block;
   }
@@ -10,7 +10,6 @@
   grid-gap: 10px;
   margin: 0;
   padding-top: 5px;
-  
   grid-template-columns: 62px 250px 60px;
   grid-template-areas:
   "sidebar header rightbar"
@@ -79,4 +78,37 @@
 #picture-preview {
   overflow: hidden;
   border-radius: 4px;
+}
+
+//modal
+.modal {
+}
+
+// .modal-content {
+//   position: relative; 
+//   background-color: white;
+//   padding: 20px; 
+//   margin: auto; 
+//   width: 75%;  
+//   -webkit-animation-name: animatetop;
+//   -webkit-animation-duration: 0.4s;
+//   animation-name: animatetop;
+//   animation-duration: 0.4s
+// }
+.close-btn {
+  float: right; 
+  color: lightgray; 
+  font-size: 24px;  
+  font-weight: bold;
+}
+.close-btn:hover {
+  color: darkgray;
+}
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
