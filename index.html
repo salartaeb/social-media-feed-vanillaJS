@@ -13,8 +13,8 @@
   <!-- Normalize css across browsers -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    crossorigin="anonymous" referrerpolicy="no-referrer" 
+  />
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/form.css" />
@@ -23,12 +23,11 @@
 </head>
 
 <body>
-  
   <div class="container">
-    <a id="modal-btn">New Post</a>
+    <a id="modal-btn">Post</a>
     <form class="post-form">
       <p class="alert"></p>
-      <div class="form-control">
+    <div class="form-control">
         <div class="post-content">
           <img class="sidebar top" src="https://i.pravatar.cc/150?u=fake@pravatar.com
           " alt='avatar' />
@@ -44,17 +43,21 @@
           <img id="frame" src="" width="100%" height="200px"  />
         </div>
         <div style="display: flex; flex-direction: row;">
-        <a href="javascript:{}" class="submit-post-btn">
-          Post</a>
+        <a href="javascript:{}" class="submit-post-btn" >
+          <span>Post</span><i class="fas fa-edit"></i></a>
         <a class="close-btn">X</a>
       </div>
     </form>
-    
-
-    
   </div>
+  
   <div class="news-feed">
-    <button onclick="topFunction()" id="scroll-to-top" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fas fa-edit"></i></button>
+  </div>
+  <div class="presentation-footer">
+    <span class="footer-icon-one">X</span>
+    <span class="footer-icon-two">X</span>
+    <span class="footer-icon-three">X</span>
+    <span class="footer-icon-four">X</span>
   </div>
   <script src="app.js"></script>
 </body>
