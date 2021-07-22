@@ -1,25 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
 * {
-  // background-color: #eee;
-  max-width: 400px;
+  max-width: 414px;
   margin: auto;
-  
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: black;
 }
 
 .container {
   display: grid;
-  // grid-template-rows: auto;
-  // margin: auto;
   background-color: black;
+  margin: 0;
+  box-shadow: none !important;
   
 }
 
 .icon {
   height: 20px;
-  width: 20px;
+  width: 29;
 }
+
+
+
