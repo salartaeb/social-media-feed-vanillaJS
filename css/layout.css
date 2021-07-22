@@ -1,11 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 * {
-  background-color: #EEE;
-  max-width: 400px;
+  max-width: 414px;
+  margin: auto;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  background-color: #15202b;
+  margin: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  width: 100%;
+}
+
+#modal-btn {
+  background-color: #22303c;
+  color: #8899a6;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 16px;
+  text-align: center;
+  right: 20px;
+  width: 100%;
+}
+
+#modal-btn:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+span {
+  width: 100%;
+  margin-top: 5px;
+  color: #1DA1F2;
+  background-color: #15202b;
+  padding: 5px;
+  font-size: 20px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.presentation-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  width: 100%;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  background-color: #22303c;
+  border-top: #22303c 4px solid;
+  padding-bottom: 10px;
+}
+
+.presentation-footer span {
+  color: #1DA1F2;
+  background-color: #22303c;
 }
