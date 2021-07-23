@@ -2,8 +2,8 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 75px 250px;
-  grid-template-columns: 40px 75px 250px;
-  grid-template-areas: "sidebar header header""....... text text ""....... content content"".......  footer  .......";
+      grid-template-columns: 40px 75px 250px;
+      grid-template-areas: "sidebar header ......." "....... text text " "....... content content" ".......  footer  .......";
   background-color: #15202b;
   width: 90%;
   border-top: #8899a6 2px solid;
@@ -32,7 +32,6 @@
   margin-left: 0;
   margin-bottom: 1em;
   border-radius: 10px;
-  width: 100%;
 }
 
 .sidebar {
@@ -43,7 +42,6 @@
   border-radius: 50%;
   max-width: 30px;
   width: 100%;
-  border-color: #bb8;
   border-width: 2px;
   border-style: solid;
 }
@@ -62,11 +60,9 @@
   grid-area: content;
 }
 
-/* Header */
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: header;
 }
 
@@ -80,7 +76,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 75px 250px;
-  grid-template-columns: 40px 75px 250px;
+      grid-template-columns: 40px 75px 250px;
   margin: 0;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -151,11 +147,22 @@ i {
 }
 
 .fa-heart {
-  color: #fff;
+  color: red;
   background-color: 15202b !important;
 }
 
-.fa-heart:hover {
-  color: red;
-  cursor: pointer;
+input::-webkit-input-placeholder {
+  color: #8899a6;
+}
+
+input:-ms-input-placeholder {
+  color: #8899a6;
+}
+
+input::-ms-input-placeholder {
+  color: #8899a6;
+}
+
+input::placeholder {
+  color: #8899a6;
 }

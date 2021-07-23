@@ -1,16 +1,8 @@
-// Variables
-// Text
-$name-color: #FFF;
-$name-size: 15px;
-$post-font: 'arial, sans-serif';
-
-.news-feed {}
-
 .post-container {
   display: grid;
   grid-template-columns: 40px 75px 250px;
   grid-template-areas:
-    "sidebar header header"
+    "sidebar header ......."
     "....... text text "
     "....... content content"
     ".......  footer  .......";
@@ -18,12 +10,9 @@ $post-font: 'arial, sans-serif';
   ;
   width: 90%;
   border-top: #8899a6 2px solid;
-  // border-radius: 10px;
   margin-right: 0;
-
   padding-right: 1em;
   padding-left: 1em;
-  // border-radius: 10px;
 
 }
 
@@ -47,7 +36,7 @@ $post-font: 'arial, sans-serif';
   margin-left: 0;
   margin-bottom: 1em;
   border-radius: 10px;
-  width: 100%;
+
 }
 
 .sidebar {
@@ -56,7 +45,6 @@ $post-font: 'arial, sans-serif';
   border-radius: 50%;
   max-width: 30px;
   width: 100%;
-  border-color: #bb8;
   border-width: 2px;
   border-style: solid;
 }
@@ -70,7 +58,7 @@ $post-font: 'arial, sans-serif';
 
 }
 
-/* Header */
+
 
 .header {
   grid-area: header;
@@ -93,7 +81,7 @@ $post-font: 'arial, sans-serif';
 
 }
 
-// Header Elements
+
 
 #name {
   color: white;
@@ -118,7 +106,7 @@ $post-font: 'arial, sans-serif';
   padding-bottom: 2em;
 }
 
-//icons
+
 i {
   font-family: 'FontAwesome' !important;
   margin: 0;
@@ -160,11 +148,12 @@ i {
 }
 
 .fa-heart {
-  color: #fff;
+  color: red;
   background-color: 15202b !important;
 
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
+
+}
+
+input::placeholder {
+  color: #8899a6;
 }

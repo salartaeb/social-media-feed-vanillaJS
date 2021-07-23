@@ -1,12 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 * {
-  max-width: 414px;
   margin: auto;
+  max-width: 414px;
+}
+
+@media (max-width: 360px) {
+  * {
+    max-width: 360px;
+  }
+  * .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  * {
+    max-width: 375px;
+  }
+  * .text {
+    font-size: 16px;
+  }
 }
 
 body {
   font-family: Helvetica, sans-serif;
-  background-color: #eee;
+  background-color: #eee !important;
 }
 
 .container {
@@ -38,12 +56,17 @@ body {
 span {
   width: 100%;
   margin-top: 5px;
-  color: #1DA1F2;
+  color: white;
   background-color: #15202b;
   padding: 5px;
   font-size: 20px;
   margin: 0;
   border-radius: 10px;
+}
+
+span:hover {
+  color: #1DA1F2;
+  cursor: pointer;
 }
 
 .presentation-footer {

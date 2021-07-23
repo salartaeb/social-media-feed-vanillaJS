@@ -12,24 +12,30 @@
   display: -ms-grid;
   display: grid;
   grid-gap: 15px;
-  margin: 0;
-  -ms-grid-columns: 62px 250px 60px;
-      grid-template-columns: 62px 250px 60px;
-      grid-template-areas: "sidebar header rightbar" "....... header ....... " ".......  content  content";
+  margin-left: 0;
+  margin-right: 0;
+  -ms-grid-columns: 20px 180px 50px;
+      grid-template-columns: 20px 180px 50px;
+      grid-template-areas: "sidebar header rightbar" "....... ....... ....... " "......  content  .......";
+  width: 90%;
 }
 
 .image-upload > input {
   display: none;
 }
 
+.post-header {
+  width: 90%;
+}
+
 #post {
   word-break: break-word;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
   border: none;
   font-size: 1.5em;
   background-color: #22303c;
+  width: 90%;
 }
 
 input:focus {
@@ -46,6 +52,7 @@ input:focus {
   width: 100%;
   margin-top: 5px;
   background-color: #15202b;
+  color: white;
   padding: 5px;
   font-size: 15px;
   margin: 0;
@@ -53,9 +60,14 @@ input:focus {
   display: block;
 }
 
+.submit-post-btn:hover {
+  color: #1DA1F2;
+  cursor: pointer;
+}
+
 .fa-upload {
   color: #8899a6;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: #15202b;
 }
 
@@ -65,9 +77,14 @@ input:focus {
 }
 
 .fa-edit {
-  color: #1DA1F2;
+  color: #fff;
   font-size: 20px;
   background-color: #15202b;
+}
+
+.fa-edit:hover {
+  cursor: pointer;
+  color: #1DA1F2;
 }
 
 .fa-arrow-circle-up {
@@ -81,27 +98,12 @@ input:focus {
   font-size: 30px;
 }
 
-#frame {
-  margin: 0;
-}
-
 #picture-preview {
   overflow: hidden;
 }
 
 .close-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  float: right;
   color: red;
-  border-color: red;
-  border-style: solid;
-  border-width: 5px;
   background-color: #15202b;
   border-width: 0;
   padding: 5px;

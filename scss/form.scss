@@ -11,26 +11,32 @@
 .post-content {
   display: grid;
   grid-gap: 15px;
-  margin: 0;
-  grid-template-columns: 62px 250px 60px;
+  margin-left: 0;
+  margin-right: 0;
+  grid-template-columns: 20px 180px 50px;
   grid-template-areas:
     "sidebar header rightbar"
-    "....... header ....... "
-    ".......  content  content"
+    "....... ....... ....... "
+    "......  content  .......";
+  width: 90%;
 }
 
 .image-upload>input {
   display: none;
 }
 
+.post-header {
+  width: 90%
+}
+
 #post {
   word-break: break-word;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
   border: none;
   font-size: 1.5em;
   background-color: #22303c;
+  width: 90%;
 
 }
 
@@ -46,11 +52,18 @@ input:focus {
   width: 100%;
   margin-top: 5px;
   background-color: #15202b;
+  color: white;
   padding: 5px;
   font-size: 15px;
   margin: 0;
   border-radius: 10px;
   display: block;
+
+  &:hover {
+    color: #1DA1F2;
+    cursor: pointer;
+
+  }
 }
 
 // .alert {
@@ -67,7 +80,7 @@ input:focus {
 
 .fa-upload {
   color: #8899a6;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: #15202b;
 
   &:hover {
@@ -77,10 +90,14 @@ input:focus {
 }
 
 .fa-edit {
-  color: #1DA1F2;
+  color: #fff;
   font-size: 20px;
   background-color: #15202b;
 
+  &:hover {
+    cursor: pointer;
+    color: #1DA1F2;
+  }
 
 
 }
@@ -100,37 +117,29 @@ input:focus {
 }
 
 
-
-#frame {
-  margin: 0;
-}
-
 #picture-preview {
   overflow: hidden;
+
+
   // border-radius: 10px;
 }
 
 .close-btn {
-  display: flex;
-  flex-direction: row;
-  float: right;
   color: red;
-  border-color: red;
-  border-style: solid;
-  border-width: 5px;
   background-color: #15202b;
   border-width: 0;
   padding: 5px;
   font-size: 15px;
-
   border-radius: 4px;
   text-align: center;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+
+  }
 }
 
-.close-btn:hover {
-  color: white;
-  cursor: pointer;
-}
 
 @-webkit-keyframes animatetop {
   from {
